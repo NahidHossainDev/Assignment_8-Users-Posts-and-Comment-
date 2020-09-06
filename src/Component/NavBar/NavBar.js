@@ -26,7 +26,7 @@ import HomePage from "../HomePage/HomePage";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  main: {
     display: "flex",
   },
   appBar: {
@@ -64,7 +64,7 @@ export default function ClippedDrawer(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.main}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -100,15 +100,13 @@ export default function ClippedDrawer(props) {
                 </ListItem>
               </Link>
             <Divider />
-           
-            <Link to="/commentsDetail">
+
               <ListItem button>
                 <ListItemIcon>
                   <CommentIcon className={classes.icons} />
                   Comment
                   </ListItemIcon>
-                </ListItem>
-              </Link>
+              </ListItem>
             <Divider />
 
             <ListItem button>

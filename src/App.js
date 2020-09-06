@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import NavBar from "../src/Component/NavBar/NavBar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import CommentsDetail from './Component/CommentsDetail/CommentsDetail';
 import NotFound from './Component/NotFound/NotFound';
 import HomePage from './Component/HomePage/HomePage';
+import PostDetail from './Component/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
             <Route path="/home">
               <HomePage></HomePage>
             </Route>
-            <Route path="/commentsDetail">
-              <CommentsDetail></CommentsDetail>
+            <Route path="/postDetail/:id">
+              <PostDetail></PostDetail>
             </Route>
             <Route exact path='/'>
               <HomePage></HomePage>
