@@ -100,15 +100,14 @@ export default function RecipeReviewCard(props) {
     </div>
   );
 
+  const num = Math.round((Math.random() * 1000));
+  console.log("number", num)
   return (
     <Grid item xs={props.showMore === true ? 6 : 8} className={classes.card}>
       <Card className={classes.root}>
         <CardHeader
-          avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              R
-            </Avatar>
-          }
+          avatar={<Avatar alt={title} src="/static/images/avatar/1.jpg" className={classes.avatar} />}
+          // avatar={<Avatar src={`https://randomuser.me/api/portraits/med/men/${num}.jpg`} alt="User" />}
           action={
             <IconButton aria-label="settings">
               <MoreVertIcon />
@@ -118,7 +117,7 @@ export default function RecipeReviewCard(props) {
         />
         <CardMedia
           className={classes.media}
-          image="https://source.unsplash.com/user/erondu"
+          image={`https://picsum.photos/id/${num}/200/300`}
           title="Paella dish"
         />
         <CardContent>
